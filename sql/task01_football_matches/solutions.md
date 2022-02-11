@@ -43,7 +43,14 @@ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division IN ('F1', 'F2');
 7) Have Huddersfield played Swansea in the period covered?
 
 ```sql
+-- This query will return all of the matches between the teams
+
 SELECT * FROM matches WHERE (hometeam = 'Huddersfield' AND awayteam = 'Swansea') OR (hometeam = 'Swansea' AND awayteam = 'Huddersfield');
+
+
+-- The EXISTS keyword in SQL acts like a conditional, returning 1 if the query in the brackets following it contains any results or 0 if not. This EXISTS query will return 1 if the two teams have ever played each other. By COUNTing the number of 1s in the response we can check if any games have been played.
+
+SELECT COUNT(1) WHERE EXISTS (SELECT * FROM matches WHERE (hometeam = 'Huddersfield' AND awayteam = 'Swansea') OR (hometeam = 'Swansea' AND awayteam = 'Huddersfield'));
 ```
 
 8) How many draws were there in the Eredivisie between 2010 and 2015?
