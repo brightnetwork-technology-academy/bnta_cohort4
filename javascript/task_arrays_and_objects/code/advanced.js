@@ -6,7 +6,7 @@
 unitedKingdom = [
     {
         name: "Scotland",
-        capital: "Belfast",
+        capital: "Edinburgh",
         population: 5454000,
         touristAttractions: [
             "Stirling Castle",
