@@ -4,7 +4,7 @@ We've seen that making a request to a local API is no different to making a requ
 
 ```jsx
 
-fetch("http://localhost:8080/api/things)
+fetch("http://localhost:8080/api/things")
 	.then(response => response.json())
 	.then(data => setState(data));
 
