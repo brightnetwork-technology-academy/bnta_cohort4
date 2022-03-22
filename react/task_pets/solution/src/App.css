@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  padding-left: 2em;
+  padding-top: 1em;
+  background-color: #b6d7a8;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas: "form layout layout layout";
+}
+
+.form-container{
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  border: 1px solid black;
+  border-radius: 1%;
+  padding: 1em;
+}
+
+.pet-layout{
+  grid-area: layout;
+  margin: 1em;
+  border: 1px solid black;
+  border-radius: 1%;
+  padding: 1em;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-element{
+  margin: 0.5em;
+  display: flex;
+}
+
+input{
+  flex-grow: 2;
+}
+
+.pet-tile-container{
+  display: flex;
+}
+
+.pet-tile{
+  border: 1px solid black;
+  border-radius: 5%;
+  margin: 1em;
+  padding: 1em;
+}
